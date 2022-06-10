@@ -9,7 +9,7 @@ pipeline {
       stages {
      	    stage('Build Docker Image'){
      	        steps{
-     	            sh "docker build . -t mohan03/sac:${DOCKER_TAG} Dockerfile"
+     	            sh "docker build . -t mohan03/sac:${DOCKER_TAG}"
      	        }
      	    }
 			stage('DockerHube Push'){
