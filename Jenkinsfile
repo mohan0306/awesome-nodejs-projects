@@ -20,49 +20,7 @@ pipeline {
 			    }
 			    }
 			    
-			     }
+			  }
+      }
 			
-		    stage ('install-apache') {
-					steps {
-					 sh "sudo yum install httpd -y"
-					}
-			    
-			}
-		
-			stage ('start-apache') {
-					steps {
-							sh "sudo service httpd start"
-					}
-			}
-			
-			stage ('check-status') {
-					steps {
-							sh "sudo service httpd status"
-					}
-			}
-			
-			stage ('deploy-index.html') {
-					steps {
-							sh "echo 'HELLO WORLD' >> index.html"
-							sh "sudo cp -r index.html /var/www/html/"
-					}
-			
-			
-			}
-		
-			
-			 stage('Hello') {
-            steps {
-                echo 'Hello World'
-            }
-        }
-    
-        stage('git') {
-            steps {
-             sh 'yum install git -y'
-            }
-        
-
-        }
-    }
-}
+		    
